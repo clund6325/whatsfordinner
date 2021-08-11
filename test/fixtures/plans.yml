@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week_day: MyString
+  meal: MyString
+  theme: MyString
+  user: one
+
+two:
+  week_day: MyString
+  meal: MyString
+  theme: MyString
+  user: two
