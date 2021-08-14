@@ -17,7 +17,13 @@ const App = () => (
       <Container>
         <Switch>
           <ProtectedRoute exact path='/home' component={Home} />
-          <ProtectedRoute exact path='/plans' component={Plans}/>
+          <ProtectedRoute exact path='/about' component={About} />
+          <ProtectedRoute exact path='/plans' component={Plans} />
+          <ProtectedRoute exact path='/recipes' component={Recipes} />
+          <ProtectedRoute exact path='/plans/:plan_id' component={PlanShow} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
+          <Route component={Nomatch} />
         </Switch>
       </Container>
     </FetchUser>
