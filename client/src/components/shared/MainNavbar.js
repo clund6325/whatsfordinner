@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 
 const MainNavbar = ({ user, handleLogout, location, history }) => {
-  const rightNavItem = () => {
+  const rightNavItems = () => {
     if (user) {
       return(
         <Nav className="justify-content-end">
