@@ -7,15 +7,24 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { initMiddleware } from 'devise-axios';
 import AuthProvider from './providers/AuthProvider';
+import PlanProvider from './providers/PlanProvider';
+import RecipeProvider, { RecipeContext } from './providers/RecipeProvider';
+import IngredProvider from './providers/IngredProvider';
 
 initMiddleware();
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <PlanProvider>
+        <RecipeProvider>
+          <IngredProvider>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </IngredProvider>
+        </RecipeProvider>
+      </PlanProvider>
     </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
