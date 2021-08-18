@@ -1,4 +1,5 @@
 import { Jumbotron } from 'react-bootstrap';
+import PlanList from './PlanList';
 
 const Plans = () => {
   return(
@@ -6,6 +7,7 @@ const Plans = () => {
       <Jumbotron>
         <h1>Plans Page</h1>
       </Jumbotron>
+      <PlanList/>
     </>
   )
 }
