@@ -1,6 +1,6 @@
 import { AuthConsumer } from '../../providers/AuthProvider';
 import { Link, withRouter } from 'react-router-dom';
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button, NavDropdown, Container } from 'react-bootstrap';
 
 const MainNavbar = ({ user, handleLogout, location, history }) => {
   const rightNavItems = () => {
@@ -8,6 +8,7 @@ const MainNavbar = ({ user, handleLogout, location, history }) => {
       return(
         <Nav className="justify-content-end">
           <Nav.Link href="/plans">Meal Plans</Nav.Link>
+          <Nav.Link href="/recipes">Recipes</Nav.Link>
           <Button variant="outline-info" onClick={() => handleLogout(history)}>
             Logout
           </Button>
@@ -24,12 +25,14 @@ const MainNavbar = ({ user, handleLogout, location, history }) => {
     }
   }
   return (
-    <Navbar bd="dark" variant="dark">
-      <Link to="/">
-        <Navbar.Brand>Home</Navbar.Brand>
-      </Link>
-      { rightNavItems() }
-    </Navbar>
+    <Container>
+      <Navbar bd="dark" variant="dark">
+        <Link to="/">
+          <Navbar.Brand>Home</Navbar.Brand>
+        </Link>
+        { rightNavItems() }
+      </Navbar>
+    </Container>
   )
 }
 

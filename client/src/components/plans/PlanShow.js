@@ -2,6 +2,7 @@ import { Button, Modal } from 'react-bootstrap';
 import { useState } from 'react';
 import PlanForm from './PlanForm';
 import { PlanConsumer } from '../../providers/PlanProvider';
+import RecipeList from '../recipes/RecipeList';
 
 const PlanShow = ({ location, match, deletePlan, history }) => {
   const [editShow, setEditShow] = useState(false);
@@ -28,6 +29,7 @@ const PlanShow = ({ location, match, deletePlan, history }) => {
           <Button variant="secondary" onClick={handleEditClose}>Close</Button>
         </Modal.Footer>
       </Modal>
+      <RecipeList planId={location.state.id} />
     </>
   )
 }

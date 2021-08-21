@@ -10,6 +10,7 @@ import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute'
 import Plans from './components/plans/Plans';
 import PlanShow from './components/plans/PlanShow';
+import Recipes from './components/recipes/Recipes';
 
 const App = () => (
   <>
@@ -21,7 +22,7 @@ const App = () => (
           <ProtectedRoute exact path='/about' component={About} />
           <ProtectedRoute exact path='/plans' component={Plans} />
           <ProtectedRoute exact path='/plans/:plan_id' component={PlanShow} />
-          {/* <ProtectedRoute exact path='/recipes' component={Recipes} /> */}
+          <ProtectedRoute exact path='/recipes' component={Recipes} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route component={Nomatch} />
