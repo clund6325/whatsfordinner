@@ -63,4 +63,9 @@ const RecipeForm = ({ addRecipe, id, title, description, serving, updateRecipe, 
   )
 }
 
-export default RecipeForm;
+const ConnectedRecipeForm = (props) => (
+  <RecipeConsumer>
+    { value => <RecipeForm {...props} {...value} />}
+  </RecipeConsumer>
+)
+export default withRouter(ConnectedRecipeForm);
