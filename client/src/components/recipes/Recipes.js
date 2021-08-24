@@ -13,6 +13,7 @@ const Recipes = ({ getAllRecipes, planId, match }) => {
   return(
     <div>
       <RecipeList planId={match.params.planId} />
+      <RecipeForm/>
     </div>
   )
 }
