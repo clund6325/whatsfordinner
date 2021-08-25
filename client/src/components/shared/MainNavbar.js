@@ -8,7 +8,7 @@ const MainNavbar = ({ user, handleLogout, location, history }) => {
       return(
           <Navbar className="justify-content-end">
             <Nav.Link href="/plans">Meal Plans</Nav.Link>
-            <Nav.Link href="/recipes">Recipes</Nav.Link>
+            {/* <Nav.Link href="/recipes">Recipes</Nav.Link> */}
             <Button variant="outline-info" onClick={() => handleLogout(history)}>
               Logout
             </Button>

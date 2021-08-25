@@ -3,9 +3,9 @@ import { RecipeConsumer } from '../../providers/RecipeProvider';
 import { ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const RecipeList = ({ recipes, getAllRecipes }) => {
+const RecipeList = ({ planId, recipes, getAllRecipes }) => {
   useEffect( () => {
-    getAllRecipes()
+    getAllRecipes(planId)
   }, [])
 
   return(
@@ -13,7 +13,7 @@ const RecipeList = ({ recipes, getAllRecipes }) => {
       <ListGroup>
         { recipes.map( r =>
           <Link to={{
-            pathname: `/recipes/${r.id}`,
+            pathname: "/plans/" + planId + "/recipes/" + r.id,
             state: {...r}
           }}>
             <ListGroup.Item>{r.title}</ListGroup.Item>
